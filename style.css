@@ -1,0 +1,67 @@
+
+
+*
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height:100vh;
+    background: #2b5876;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4e4376, #2b5876);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4e4376, #2b5876); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white !important;
+   
+}
+
+h3 {
+    margin-bottom: 1rem;
+    font-family: 'Calibri', sans-serif;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(8,3rem);
+    grid-template-rows: repeat(8,3rem);
+    grid-gap: .5rem;
+    perspective: 800px;
+    
+}
+.card {
+    position:relative;
+    transform-style: preserve-3d;
+    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
+    box-shadow: rgba(0,0,0,0.2) 0px 5px 15px;
+}
+
+.face, 
+.back {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    pointer-events: none;
+}
+.back {
+    background-color:white;
+    backface-visibility: hidden;
+}
+
+.toggleCard {
+    transform: rotateY(180deg)
+}
+
+@media (max-width: 500px) {
+    section {
+        display: grid;
+        grid-template-columns: repeat(4,4rem);
+        grid-template-rows: repeat(4,4rem);
+        grid-gap: .5rem;
+        perspective: 800px;
+}
