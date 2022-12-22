@@ -8,26 +8,24 @@ box-sizing: border-box;
 }
 
 body{
-    max-width: 1440px;
-    width: 100%;
+    max-width: 1600px;
     height:100%;
-    background: url(assets/wood.jpg) center /cover;
+    background-color: lightpink;
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: white !important;
+    color: rgba(0, 0, 0, 0.69);
     font-family: 'Unbounded', cursive;
 }
 
-h1 {
+ h1 {
     margin-top: 3rem;
     font-size: 2.5rem;
     text-transform: uppercase;
-    
     padding-bottom:2rem;
-
-}
+    
+} 
 h3{
     padding: 3rem 0;
     font-size: 2rem;
@@ -44,7 +42,7 @@ section {
 .card {
     position:relative;
     transform-style: preserve-3d;
-    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
+    transition: all 3s cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
     box-shadow: rgba(0,0,0,0.2) 0px 5px 15px;
 }
 
@@ -66,17 +64,53 @@ section {
 }
 
 .playerLivesCount{
-    color: rgb(239, 190, 190);
+    color: rgba(0, 0, 0, 0.69);
     font-size: 3rem;
     margin-left: 1rem;
 }
 
+
+/* mediaqueries */
+
 @media (max-width: 790px) {
     section {
         display: grid;
-        grid-template-columns: repeat(8,4rem);
-        grid-template-rows: repeat(8,4rem);
+        grid-template-columns: repeat(8,4.5rem);
+        grid-template-rows: repeat(8,4.5rem);
         grid-gap: .5rem;
         perspective: 800px;
+    }
+    h1 {
+        margin-top: 12rem;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 660px) {
+    section {
+        display: grid;
+        grid-template-columns: repeat(8,3.5rem);
+        grid-template-rows: repeat(8,3.5rem);
+        grid-gap: .5rem;
+        perspective: 800px;
+    }
+    h3{
+        
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 525px) {
+    section {
+        display: grid;
+        grid-template-columns: repeat(8,3rem);
+        grid-template-rows: repeat(8,3rem);
+        grid-gap: .5rem;
+        perspective: 800px;
+}
+h1 {
+    
+    font-size: 1.5rem;
 }
 }
