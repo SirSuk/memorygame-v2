@@ -2,7 +2,7 @@
 console.log("raddd")
 const section = document.querySelector("section");
 const playerLivesCount = document.querySelector("span");
-let playerLives= 16
+let playerLives= 20
 
 //Link text
 playerLivesCount.textContent = playerLives;
@@ -17,6 +17,14 @@ const getData = () => [
     {imgSrc: './assets/churros.jpg', name: 'churros  '},
     {imgSrc: './assets/canario.jpg', name: 'canario'},
     {imgSrc: './assets/pasta.jpg', name: 'pasta'},
+    {imgSrc: './assets/pez.jpg', name: 'pez'},
+    {imgSrc: './assets/agua.jpg', name: 'agua  '},
+    {imgSrc: './assets/cola.jpg', name: 'cola'},
+    {imgSrc: './assets/medusa.jpg', name: 'medusa'},
+    {imgSrc: './assets/tetera.jpg', name: 'tetera'},
+    {imgSrc: './assets/sandwich.jpg', name: 'sandwich'},
+    {imgSrc: './assets/flor.jpg', name: 'flor'},
+    {imgSrc: './assets/cafe.jpg', name: 'cafe'},
     {imgSrc: './assets/perro.jpg', name: 'perro'},
     {imgSrc: './assets/cerveza.jpg', name: 'cerveza  '},
     {imgSrc: './assets/chaval.jpg', name: 'chaval'},
@@ -25,7 +33,14 @@ const getData = () => [
     {imgSrc: './assets/churros.jpg', name: 'churros  '},
     {imgSrc: './assets/canario.jpg', name: 'canario'},
     {imgSrc: './assets/pasta.jpg', name: 'pasta'},
-    
+    {imgSrc: './assets/pez.jpg', name: 'pez'},
+    {imgSrc: './assets/agua.jpg', name: 'agua  '},
+    {imgSrc: './assets/cola.jpg', name: 'cola'},
+    {imgSrc: './assets/medusa.jpg', name: 'medusa'},
+    {imgSrc: './assets/tetera.jpg', name: 'tetera'},
+    {imgSrc: './assets/sandwich.jpg', name: 'sandwich'},
+    {imgSrc: './assets/flor.jpg', name: 'flor'},
+    {imgSrc: './assets/cafe.jpg', name: 'cafe'},
    
 ]
 
@@ -135,9 +150,10 @@ const restart = (text) => {
         section.style.pointerEvents = "all";
         },1000);
     })
-    playerLives = 16;
+    playerLives = 20;
     playerLivesCount.textContent = playerLives;
     setTimeout(() => window.alert(text),100);
 }
+
 
 cardGenerator()
