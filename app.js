@@ -120,12 +120,12 @@ const checkCards = (e) => {
         playerLivesCount.textContent = playerLives;
 
         if(playerLives === 0) {
-            restart("😧try again");
+            restart("😧Intentalo de Nuevo");
       
         }
     }
    }
-   if(toggleCard.length === 16) {
+   if(toggleCard.length === 32) {
             restart("😘you won")
    }
 }
