@@ -66,8 +66,9 @@ section {
 }
 
 .playerLivesCount{
-    color: rgb(2, 1, 1);
+    color: rgb(239, 190, 190);
     font-size: 3rem;
+    margin-left: 1rem;
 }
 
 @media (max-width: 790px) {
