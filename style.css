@@ -108,13 +108,14 @@ section {
 @media (max-width: 525px) {
     section {
         display: grid;
-        grid-template-columns: repeat(8,3rem);
-        grid-template-rows: repeat(8,3rem);
-        grid-gap: .5rem;
-        perspective: 800px;
+        grid-template-columns: repeat(6,3rem);
+        grid-template-rows: repeat(auto,3rem);
+        grid-gap: .2rem;
+        perspective: 400px;
 }
 h1 {
     
-    font-size: 1.5rem;
+    font-size: 1rem;
+    
 }
 }
