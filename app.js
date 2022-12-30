@@ -7,40 +7,44 @@ let playerLives= 20
 //Link text
 playerLivesCount.textContent = playerLives;
 
+
+const loader = document.querySelector(".loader");
+console.log(loader)
+setTimeout(() => {
+    loader.style.display="none"
+  }, 3000)
+
+
+
+
 // Generate the object
 const getData = () => [
-    {imgSrc: './assets/perro.webp', name: 'perro'},
-    {imgSrc: './assets/cerveza.webp', name: 'cerveza  '},
-    {imgSrc: './assets/chaval.webp', name: 'chaval'},
-    {imgSrc: './assets/manzana.webp', name: 'manzana'},
-    {imgSrc: './assets/naranja.webp', name: 'naranja'},
-    {imgSrc: './assets/guantes.webp', name: 'guantes  '},
-    {imgSrc: './assets/canario.webp', name: 'canario'},
-    {imgSrc: './assets/tmt.webp', name: 'tmt'},
-    {imgSrc: './assets/pez.webp', name: 'pez'},
-    {imgSrc: './assets/agua.webp', name: 'agua  '},
-    {imgSrc: './assets/cola.webp', name: 'cola'},
-    {imgSrc: './assets/medusa.webp', name: 'medusa'},
-    {imgSrc: './assets/delfin.webp', name: 'delfin'},
-    {imgSrc: './assets/balon.webp', name: 'balon'},
-    {imgSrc: './assets/flor.webp', name: 'flor'},
-    {imgSrc: './assets/cafe.webp', name: 'cafe'},
-    {imgSrc: './assets/perro.webp', name: 'perro'},
-    {imgSrc: './assets/cerveza.webp', name: 'cerveza  '},
-    {imgSrc: './assets/chaval.webp', name: 'chaval'},
-    {imgSrc: './assets/manzana.webp', name: 'manzana'},
-    {imgSrc: './assets/naranja.webp', name: 'naranja'},
-    {imgSrc: './assets/guantes.webp', name: 'guantes  '},
-    {imgSrc: './assets/canario.webp', name: 'canario'},
-    {imgSrc: './assets/tmt.webp', name: 'tmt'},
-    {imgSrc: './assets/pez.webp', name: 'pez'},
-    {imgSrc: './assets/agua.webp', name: 'agua  '},
-    {imgSrc: './assets/cola.webp', name: 'cola'},
-    {imgSrc: './assets/medusa.webp', name: 'medusa'},
-    {imgSrc: './assets/delfin.webp', name: 'delfin'},
-    {imgSrc: './assets/balon.webp', name: 'balon'},
-    {imgSrc: './assets/flor.webp', name: 'flor'},
-    {imgSrc: './assets/cafe.webp', name: 'cafe'},
+   
+    {imgSrc: './assets/v2/abeja.png', name: 'abeja'},
+    {imgSrc: './assets/v2/buho.png', name: 'buho'},
+    {imgSrc: './assets/v2/conejo.png', name: 'conejo'},
+    {imgSrc: './assets/v2/estrella.png', name: 'estrella'},
+    {imgSrc: './assets/v2/fruta.png', name: 'fruta'},
+    {imgSrc: './assets/v2/gallina.jpg', name: 'gallina'},
+    {imgSrc: './assets/v2/gato.png', name: 'gato'},
+    {imgSrc: './assets/v2/pato.png', name: 'pato'},
+    {imgSrc: './assets/v2/perro.jpg', name: 'perro'},
+    {imgSrc: './assets/v2/pez.png', name: 'pez'},
+    {imgSrc: './assets/v2/vaca.png', name: 'vaca'},
+    {imgSrc: './assets/v2/zorro.jpg', name: 'zorro'},
+    {imgSrc: './assets/v2/abeja.png', name: 'abeja'},
+    {imgSrc: './assets/v2/buho.png', name: 'buho'},
+    {imgSrc: './assets/v2/conejo.png', name: 'conejo'},
+    {imgSrc: './assets/v2/estrella.png', name: 'estrella'},
+    {imgSrc: './assets/v2/fruta.png', name: 'fruta'},
+    {imgSrc: './assets/v2/gallina.jpg', name: 'gallina'},
+    {imgSrc: './assets/v2/gato.png', name: 'gato'},
+    {imgSrc: './assets/v2/pato.png', name: 'pato'},
+    {imgSrc: './assets/v2/perro.jpg', name: 'perro'},
+    {imgSrc: './assets/v2/pez.png', name: 'pez'},
+    {imgSrc: './assets/v2/vaca.png', name: 'vaca'},
+    {imgSrc: './assets/v2/zorro.jpg', name: 'zorro'},
+    
    
 ]
 
@@ -125,7 +129,7 @@ const checkCards = (e) => {
         }
     }
    }
-   if(toggleCard.length === 32) {
+   if(toggleCard.length === 24) {
             restart("😘you won")
    }
 }
@@ -150,7 +154,7 @@ const restart = (text) => {
         section.style.pointerEvents = "all";
         },1000);
     })
-    playerLives = 20;
+    playerLives = 15;
     playerLivesCount.textContent = playerLives;
     setTimeout(() => window.alert(text),100);
 }
