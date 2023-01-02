@@ -1,12 +1,12 @@
 //Grab acouple of things
 window.onload = () => {
 const section = document.querySelector("section");
-const playerLivesCount = document.querySelector("span");
+const contadorDeVidas = document.querySelector("span");
 let playerLives= 20
 
 
 //Link text
-playerLivesCount.textContent = playerLives;
+contadorDeVidas.textContent = playerLives;
 
 
 
@@ -37,8 +37,7 @@ const getData = () => [
     {imgSrc: './assets/v2/perro.jpg', name: 'perro'},
     {imgSrc: './assets/v2/leonmarino.jpg', name: 'leonmarino'},
     {imgSrc: './assets/v2/vaca.jpg', name: 'vaca'},
-    {imgSrc: './assets/v2/zorro.jpg', name: 'zorro'},
-    
+    {imgSrc: './assets/v2/zorro.jpg', name: 'zorro'},  
    
 ]
 
@@ -47,7 +46,6 @@ const randomize = () => {
    
     const cardData = getData()
     cardData.sort(() => Math.random() - 0.5);
-    console.log(cardData)
     return cardData;
     
 }
@@ -57,7 +55,6 @@ const randomize = () => {
 
 const cardGenerator= () => {
     const cardData = randomize();
-    console.log("randomize")
     // Generate the HTML
 
 
@@ -91,7 +88,6 @@ const cardGenerator= () => {
 // Check cards
 
 const checkCards = (e) => {
-    console.log("cheking")
     const clickedCard = e.target;
     clickedCard.classList.add("flipped")
     const flippedCards= document.querySelectorAll(".flipped");
@@ -102,20 +98,17 @@ const checkCards = (e) => {
     if( flippedCards[0].getAttribute('name') === 
         flippedCards[1].getAttribute('name')
         ) {
-        console.log("match")
         flippedCards.forEach((card) => {
             card.classList.remove("flipped");
             card.style.pointerEvents = 'none';
         });
     } else {
-        console.log("wrong")
         flippedCards.forEach((card) => {
             card.classList.remove("flipped");
             setTimeout(() => card.classList.remove("toggleCard"), 1000);
         });
-        console.log("mal")
         playerLives--;
-        playerLivesCount.textContent = playerLives;
+        contadorDeVidas.textContent = playerLives;
 
         if(playerLives === 0) {
             restart("😧Intentalo de Nuevo");
@@ -149,7 +142,7 @@ const restart = (text) => {
         },1000);
     })
     playerLives = 15;
-    playerLivesCount.textContent = playerLives;
+    contadorDeVidas.textContent = playerLives;
     setTimeout(() => window.alert(text),100);
 }
 
