@@ -1,18 +1,12 @@
 //Grab acouple of things
-console.log("raddd")
+window.onload = () => {
 const section = document.querySelector("section");
 const playerLivesCount = document.querySelector("span");
 let playerLives= 20
 
+
 //Link text
 playerLivesCount.textContent = playerLives;
-
-
-const loader = document.querySelector(".loader");
-console.log(loader)
-setTimeout(() => {
-    loader.style.display="none"
-  }, 3000)
 
 
 
@@ -161,3 +155,5 @@ const restart = (text) => {
 
 
 cardGenerator()
+
+}
